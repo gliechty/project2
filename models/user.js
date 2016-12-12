@@ -17,6 +17,5 @@ User.methods.validPassword = function(password){
 	return bcrypt.compareSync(password, this.local.password);
 };
 
-mongoose.connect( process.env.MONGODB_URI || "YOUR CURRENT LOCALHOST DB CONNECTION STRING HERE" ); //for Heroku connections
-
 module.exports = mongoose.model('User', User);
+mongoose.connect( process.env.MONGODB_URI || "YOUR CURRENT LOCALHOST DB CONNECTION STRING HERE" ); //for Heroku connections
