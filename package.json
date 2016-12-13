@@ -4,7 +4,9 @@
   "description": "## Trello: https://trello.com/b/ALQVLSxp/project-2 ## Balsamiq: https://project1990.mybalsamiq.com/projects/project2",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+}
   },
   "repository": {
     "type": "git",
