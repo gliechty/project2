@@ -36,15 +36,16 @@ function getLogout(request, response) {
 	response.redirect('/');
 }
 
-// // Restricted page
-// function secret(request, response){
-// 	response.render('secret.ejs', {message: request.flash('You Got it')});
-// }
+// Main page
+function home(request, response){
+	response.render('home.ejs', {message: request.flash('You Got it')});
+}
 
 module.exports = {
   getLogin: getLogin,
-  postLogin: postLogin ,
+  postLogin: postLogin,
   getSignup: getSignup,
   postSignup: postSignup,
-  getLogout: getLogout
+  getLogout: getLogout,
+  home: home
 };

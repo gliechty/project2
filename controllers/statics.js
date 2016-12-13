@@ -1,8 +1,9 @@
 // GET /
 function home(req, res) {  
-  res.render('landing');
+  res.render('index');
 }
 
 module.exports = {
   home: home,
 };
+
