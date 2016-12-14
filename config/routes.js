@@ -49,4 +49,4 @@ router.route("/home")
 router.route("/home/meme")
   .get(authenticatedUser, usersController.showMeme);
 
-module.exports = router
+module.exports = router;
