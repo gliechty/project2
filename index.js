@@ -1,4 +1,5 @@
 var express      = require('express');
+var unirest 	 = require('unirest');
 var app          = express();
 var mongoose     = require('mongoose');
 var passport     = require('passport');

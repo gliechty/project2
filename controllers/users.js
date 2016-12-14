@@ -41,6 +41,15 @@ function home(request, response){
 	response.render('home.ejs', {message: request.flash('You Got it')});
 }
 
+//******************************
+// Route to show the meme //add!!!
+//put header stuff - API key - here ? Look up set headers- 
+// part of request header (object notation) w/ mashape key and key
+// look up pass api key through header
+function showMeme(request, response){
+
+}
+
 module.exports = {
   getLogin: getLogin,
   postLogin: postLogin,

@@ -19,9 +19,6 @@
   },
   "homepage": "https://github.com/gliechty/project2#readme",
   "dependencies": {
-    "express": "^4.14.0"
-    },
-  "dependencies": {
     "bcrypt-nodejs": "latest",
     "body-parser": "~1.0.0",
     "connect-flash": "~0.1.1",
@@ -38,6 +35,10 @@
     "passport-facebook": "~1.0.2",
     "passport-google-oauth": "~0.1.5",
     "passport-local": "~0.1.6",
-    "passport-twitter": "~1.0.2"
+    "passport-twitter": "~1.0.2",
+    "unirest": "^0.5.1"
+  },
+  "devDependencies": {
+    "unirest": "^0.5.1"
   }
 }
