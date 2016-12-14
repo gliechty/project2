@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sample Project</title>
+	<title>Yoda MEMEr</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -9,6 +9,13 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <!-- 	<link rel="stylesheet" type="text/css" href="public/css/styles.css"> -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- app.js file -->
+
+<script src="./js/app.js"></script>
 
 </head>
 <body>
@@ -22,7 +29,7 @@
 	        <span class="icon-bar"></span>
 	        <span class="icon-bar"></span>
 	      </button>
-	      <a class="navbar-brand" href="#">My Project Mockup</a>
+	      <a class="navbar-brand" href="#">MEMEr</a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
@@ -50,20 +57,37 @@
 				<h1>Homepage <small>Where it all begins</small></h1>
 			</div>
 		</div>
+	<!-- Begin input field -->
+	<section id="meme" class='container'>
 		<div class="container">
 			<form class="row">
-			  <div class="col-sm-3 col-md-3">
-			    <h5>Search for something here:</h5>
+			  <div class="form-group col-sm-7 col-md-7">
+			    <input type="text" class="form-control" id="topText" placeholder="Top Text">
 			  </div>
 			  <div class="form-group col-sm-7 col-md-7">
-			    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Search">
+			    <input type="text" class="form-control" id="bottomText" placeholder="Bottom Text">
 			  </div>
-			  <div class="form-group col-sm-2 col-md-2">
-			 	<button type="submit" class="btn btn-default">Submit</button>
+			  <!-- start dropdown -->
+			  <div class="form-group col-sm-7 col-md-7">
+			    <label for="img">Image</label>
+			    <select class="form-control" id="img">
+			      <option>2nd Term Obama</option>
+			      <option>Aaaaand Its Gone</option>
+			      <option>Ace Primo</option>
+			      <option>Admiral Ackbar Relationship Expert</option>
+			      <option>Advice Dog</option>
+			      <option>Crazy Hispanic Man</option>
+			      <option>Disaster Girl</option>
+			      <option>Gollum</option>
+			    </select>
+		   	   </div>
+			  <!-- end dropdown -->
+			  <div class="form-group col-sm-7 col-md-2">
+			 	<button id="button" type="submit" class="btn btn-default">Generate Meme</button>
 			  </div>
 			</form>
 
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-md-6">
 					Activated charcoal pok pok echo park, hammock pork belly cliche tofu 8-bit art party slow-carb readymade distillery sustainable biodiesel taxidermy. Meditation viral unicorn hammock, organic live-edge glossier salvia art party master cleanse. Meggings literally gluten-free, beard trust fund letterpress 3 wolf moon taxidermy gastropub raw denim.
 				</div>
@@ -80,15 +104,20 @@
 					  </div>
 					</div>
 				</div>
-			</div>
+			</div -->
 		</div>
+	</section>
 	</div>
 
 	<!-- jQuery -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+	<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </body>
 </html>

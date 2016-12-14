@@ -15,6 +15,10 @@ function authenticatedUser(req, res, next){
 	res.redirect('/');
 }
 
+////////////
+// routes //
+////////////
+
 router.route('/')
   .get(staticsController.home);
 

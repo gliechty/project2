@@ -9,14 +9,6 @@ var User = mongoose.Schema({
   }
 });
 
-// psuedocode for meme objects
-
-// var Meme = mongoose.Schema({
-// 	image : image,
-// 	topText: String,
-// 	bottomText: String
-// });
-
 User.methods.encrypt = function(password){
 	return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };

@@ -7,6 +7,8 @@ var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
@@ -35,5 +37,4 @@ app.use(routes);
 
 app.listen(process.env.PORT || 3000);
 
-mongoose.createConnection( process.env.MONGODB_URI || "mongodb://localhost/3000" ); //for Heroku connections
 mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/3000" );
