@@ -1,4 +1,8 @@
 var express = require('express');
+
+// requires unirest for mashape API routes
+var unirest = require('unirest');
+
 var router = express.Router();
 // Parses information from POST
 var bodyParser = require('body-parser');
@@ -19,21 +23,30 @@ function authenticatedUser(req, res, next){
 // routes //
 ////////////
 
+// gets home page 
 router.route('/')
   .get(staticsController.home);
 
+// gets signup page
 router.route('/signup')
   .get(usersController.getSignup)
-  .post(usersController.postSignup)
+  .post(usersController.postSignup);
 
+// gets login page
 router.route('/login')
   .get(usersController.getLogin)
-  .post(usersController.postLogin)
+  .post(usersController.postLogin);
 
+// allows a user to logout
 router.route("/logout")
-  .get(usersController.getLogout)
+  .get(usersController.getLogout);
 
+// shows homepage to user after successful login
 router.route("/home")
-  .get(authenticatedUser, usersController.home)
+  .get(authenticatedUser, usersController.home);
+
+// Testing this route to GET meme from meme generator API
+router.route("/home/meme")
+  .get(authenticatedUser, usersController.showMeme);
 
 module.exports = router

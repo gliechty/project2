@@ -11,6 +11,8 @@ var session      = require('express-session');
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 
+mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/memes" );
+
 app.use(morgan('dev')); 
 app.use(cookieParser());
 app.use(bodyParser()); 
@@ -37,5 +39,3 @@ var routes = require('./config/routes');
 app.use(routes);
 
 app.listen(process.env.PORT || 3000);
-
-mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/3000" );

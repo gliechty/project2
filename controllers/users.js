@@ -1,5 +1,8 @@
 var passport = require("passport");
 
+// requiring unirest for API consumption
+var unirest = require('unirest');
+
 // GET /signup
 function getSignup(request, response) {
 	response.render('signup.ejs', {message: request.flash('signupMessage')});
@@ -47,7 +50,11 @@ function home(request, response){
 // part of request header (object notation) w/ mashape key and key
 // look up pass api key through header
 function showMeme(request, response){
-
+	unirest.get("https://ronreiter-meme-generator.p.mashape.com/meme?bottom=Bottom+text&font=Impact&font_size=50&meme=Condescending+Wonka&top=Top+text")
+	.header("X-Mashape-Key", "DKTtWY8R04mshf8JhstCrokh41I1p15gjLOjsn7L73daBC8Xdz")
+	.end(function (result) {
+  		console.log(result.status, result.headers, result.body);
+	});
 }
 
 module.exports = {
@@ -56,5 +63,6 @@ module.exports = {
   getSignup: getSignup,
   postSignup: postSignup,
   getLogout: getLogout,
-  home: home
+  home: home,
+  showMeme: showMeme
 };
