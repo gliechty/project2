@@ -1,4 +1,3 @@
-https://github.com/den-wdi-2/schedule/issues/13
 var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
@@ -6,6 +5,7 @@ var User = mongoose.Schema({
   local : {
     email        : String,
     password     : String,
+    memes		 : Object
   }
 });
 

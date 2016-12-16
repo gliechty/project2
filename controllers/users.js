@@ -1,5 +1,8 @@
 var passport = require("passport");
 
+// btoa function
+var btoa = require('btoa');
+
 // GET /signup
 function getSignup(request, response) {
 	response.render('signup.ejs', {message: request.flash('signupMessage')});
@@ -46,25 +49,24 @@ function home(request, response){
 //put header stuff - API key - here ? Look up set headers- 
 
 function showMeme(req, res){
-	// req.get("https://ronreiter-meme-generator.p.mashape.com/meme?bottom=Bottom+text&font=Impact&font_size=50&meme=Condescending+Wonka&top=Top+text&mashape-key=75YmJBAs6kmshPHOtokBTccTVQYYp1h379tjsnh2ftavbqSb5g");
-	// res.setHeader("X-Mashape-Key", "75YmJBAs6kmshPHOtokBTccTVQYYp1h379tjsnh2ftavbqSb5g");
-	// (function (result) {
-  		// console.log(result.status, result.headers, result.body);
+	console.log("function called");
+	var request = require('request');
+
+	// unirest.get("https://ronreiter-meme-generator.p.mashape.com/meme?bottom=Hey&font=Impact&font_size=50&meme=Condescending+Wonka&top=Clay")
+	// .header("X-Mashape-Key", "DKTtWY8R04mshf8JhstCrokh41I1p15gjLOjsn7L73daBC8Xdz")
+	// .end(function (result) {
+	//   console.log(result.status, result.headers, result.body);
 	// });
-	// res.render('index');
-	// console.log("done");
-	$.ajax({
-    url: 'https://ronreiter-meme-generator.p.mashape.com/meme?bottom=Bottom+text&font=Impact&font_size=50&meme=Condescending+Wonka&top=Top+text&mashape-key=75YmJBAs6kmshPHOtokBTccTVQYYp1h379tjsnh2ftavbqSb5g', // The URL to the API. You can get this in the API page of the API you intend to consume
-    type: 'GET', // The HTTP Method, can be GET POST PUT DELETE etc
-    data: {}, // Additional parameters here
-    dataType: 'json',
-    success: function(data) { console.log((data)); },
-    error: function(err) { alert(err); },
-    beforeSend: function(xhr) {
-    xhr.setRequestHeader("X-Mashape-Authorization", "75YmJBAs6kmshPHOtokBTccTVQYYp1h379tjsnh2ftavbqSb5g"); // Enter here your Mashape key
-    }
-});
-}
+	request("https://ronreiter-meme-generator.p.mashape.com/meme?bottom=Bottom+text&font=Impact&font_size=50&meme=Condescending+Wonka&top=Top+text&mashape-key=75YmJBAs6kmshPHOtokBTccTVQYYp1h379tjsnh2ftavbqSb5g", function (error, response, body){
+		if (!error && response.statusCode == 200){
+			// var img = new Buffer(response, 'base64').toString('ascii');
+			var base64data = new Buffer(body, 'binary').toString('base64');
+			console.log(base64data);
+			res.render('meme.ejs', {image : base64data, btoa: btoa});
+		}
+	}
+);}
+
 
 module.exports = {
   getLogin: getLogin,

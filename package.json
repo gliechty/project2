@@ -21,6 +21,7 @@
   "dependencies": {
     "bcrypt-nodejs": "latest",
     "body-parser": "~1.0.0",
+    "btoa": "^1.1.2",
     "connect-flash": "~0.1.1",
     "cookie-parser": "~1.0.0",
     "ejs": "~0.8.5",

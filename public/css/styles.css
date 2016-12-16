@@ -1,6 +1,6 @@
 * {
-	-webkit-box-shadow: -5px 5px 11px -2px rgba(0,0,0,0.67);
-	-moz-box-shadow: -5px 5px 11px -2px rgba(0,0,0,0.67);
+/*	-webkit-box-shadow: -5px 5px 11px -2px rgba(0,0,0,0.67);
+	-moz-box-shadow: -5px 5px 11px -2px rgba(0,0,0,0.67);*/
 /*	box-shadow: -5px 5px 11px -2px rgba(0,0,0,0.67);*/
 }
 h2 {
@@ -39,4 +39,48 @@ body {
 }
 .btn-primary {
 	margin: 20px 0 0 0;
+}
+.centered {
+	text-align: center;
+	margin: 0 auto;
+}
+/*.background*/
+body{
+	background: url("http://wallpapercave.com/wp/19WII9x.jpg") no-repeat center center fixed; ;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+.indie{
+	font-family: 'Indie Flower', cursive;
+}
+.big-bold{
+	font-size: 72px;
+	font-weight: bold;
+}
+.mid{
+	font-size: 40px;
+}
+.small{
+	font-size: 32px;
+}
+.orange{
+	color: rgb(217, 122, 26);
+}
+.navbar{
+   background-color: transparent;
+   border: none;
+}
+.header:hover{
+	background-color: rgb(217, 122, 26);
+	border-radius: 7px;
+}
+a{
+	color: white;
+}
+.nomargin{
+	margin: 0 auto;
+	padding: 0px;
 }

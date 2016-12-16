@@ -1,7 +1,7 @@
-https://github.com/den-wdi-2/schedule/issues/13
 var mongoose = require('mongoose');
 
 var Meme = mongoose.Schema({
+    title		   : String,
     topText        : String,
     bottomText     : String,
     image		   : String

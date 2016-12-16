@@ -4,32 +4,38 @@
     <meta charset="utf-8">
     <title>Yoda Memer</title>
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <!-- my css -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   </head>
   <body>
     <nav class="navbar navbar-default">
-      <div class="container">
+      <div class="container navbar nomargin">
         <!-- Brand and toggle get grouped for better mobile display -->
 
-        <div class="navbar-header">
+        <div class="navbar-header navbar">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Authentication with Passport and Express</a>
+<!--           <a class="navbar-brand" href="/">Authentication with Passport and Express</a> -->
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="user-menu">
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav col-sm-8 col-md-8 white indie">
             <% if (currentUser) {%>
-              <li><a href="/logout">Logout <%= currentUser.local.email %></a></li>
+              <li class="header col-sm-2 col-md-2"><a href="/logout">Logout <%= currentUser.local.email %></a></li>
+              <li class="header col-sm-2 col-md-2"><a href="/home">Make a Meme</a></li>
+              <li class="header col-sm-2 col-md-2"><a href="/home">Saved Memes</a></li>
             <% } else { %>
-              <li><a href="/login">Login</a></li>
-              <li><a href="/signup">Signup</a></li> 
+              <li class="header col-sm-2 col-md-2"><a href="/login">Login</a></li>
+              <li class="header col-sm-2 col-md-2"><a href="/signup">Signup</a></li> 
             <% } %>
-            <li><a href="/home">Meme page</a></li>
+            <!-- <li><a href="/home">Meme page</a></li> -->
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
