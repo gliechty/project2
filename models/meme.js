@@ -4,7 +4,8 @@ var Meme = mongoose.Schema({
     title		   : String,
     topText        : String,
     bottomText     : String,
-    image		   : String
+    image		   : String,
+    url			   : String
 });
 
 module.exports = mongoose.model('Meme', Meme);

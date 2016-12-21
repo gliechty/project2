@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Yoda Memer</title>
+    <title>MEMEr</title>
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <!-- my css -->
   <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -30,7 +30,7 @@
             <% if (currentUser) {%>
               <li class="header col-sm-2 col-md-2"><a href="/logout">Logout <%= currentUser.local.email %></a></li>
               <li class="header col-sm-2 col-md-2"><a href="/home">Make a Meme</a></li>
-              <li class="header col-sm-2 col-md-2"><a href="/home">Saved Memes</a></li>
+              <li class="header col-sm-2 col-md-2"><a href="/home/memes">Saved Memes</a></li>
             <% } else { %>
               <li class="header col-sm-2 col-md-2"><a href="/login">Login</a></li>
               <li class="header col-sm-2 col-md-2"><a href="/signup">Signup</a></li> 

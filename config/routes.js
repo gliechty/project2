@@ -46,7 +46,10 @@ router.route("/home")
   .get(authenticatedUser, usersController.home);
 
 // Testing this route to GET meme from meme generator API
-router.route("/home/meme")
-  .get(authenticatedUser, usersController.showMeme);
+
+// UPDATE**now testing memegenerator as a DOM object. Can later save to this route as a .post method
+
+// router.route("/home/meme")
+//   .get(authenticatedUser, usersController.showMeme);
 
 module.exports = router;
