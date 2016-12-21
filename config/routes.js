@@ -49,7 +49,7 @@ router.route("/home")
 
 // UPDATE**now testing memegenerator as a DOM object. Can later save to this route as a .post method
 
-// router.route("/home/meme")
-//   .get(authenticatedUser, usersController.showMeme);
+router.route("/home/memes")
+  .get(authenticatedUser, usersController.showMeme);
 
 module.exports = router;

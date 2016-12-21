@@ -20,38 +20,6 @@
 
 <script src="./js/app.js"></script>
 
-<!-- function to get image from mashape API -->
-<!-- <script>
-function doIt() { 
- var output = $.ajax({
-    url: 'https://ronreiter-meme-generator.p.mashape.com/meme?bottom=Bottom+text&font=Impact&font_size=50&meme=Condescending+Wonka&top=Top+text&mashape-key=75YmJBAs6kmshPHOtokBTccTVQYYp1h379tjsnh2ftavbqSb5g',
-    type: 'GET', // 
-    timeout: 100000,
-    data: {}, // Additional parameters here
-    dataType: 'json',
-    success: function(data) {
-    	//
-        //Change data.source to data.something , where something is whichever part of the object you want returned.
-        //To see the whole object you can output it to your browser console using:
-        console.log(data);
-       	document.getElementById("#meme").appendChild(data[0]);
-
-    },
-    error: function(err) { 
-    	console.log(err); 
-    	document.getElementById("#meme").appendChild(err);
-    },
-    beforeSend: function(xhr) {
-    console.log('sending key');
-    xhr.setRequestHeader("X-Mashape-Authorization", "75YmJBAs6kmshPHOtokBTccTVQYYp1h379tjsnh2ftavbqSb5g"); // Enter here your Mashape key
-    }
-});
-  
-
-}
-
-</script> -->
-
 </head>
 
 <% include ./partials/header.ejs %>
@@ -67,18 +35,19 @@ function doIt() {
 	</div>
 	<div class="container fluid">
 		<div class="container">
-			<img src="https://ronreiter-meme-generator.p.mashape.com/meme?bottom=So+hard...&font=Impact&font_size=50&meme=Condescending+Wonka&top=Fuck+Dude&mashape-key=75YmJBAs6kmshPHOtokBTccTVQYYp1h379tjsnh2ftavbqSb5g">
+
+		<!-- /////////////// -->
+<!-- do a TUNELY style render of db info here -->
+		<!-- /////////////// -->
+
+
 		</div>
 	</div>
 
 	<!-- jQuery -->
-
-	<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
-
-	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 </body>

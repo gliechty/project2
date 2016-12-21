@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default affix-top">
       <div class="container navbar nomargin">
         <!-- Brand and toggle get grouped for better mobile display -->
 
@@ -25,7 +25,7 @@
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="user-menu">
+        <div class="collapse navbar-collapse white" id="user-menu">
           <ul class="nav navbar-nav col-sm-8 col-md-8 white indie">
             <% if (currentUser) {%>
               <li class="header col-sm-2 col-md-2"><a href="/logout">Logout <%= currentUser.local.email %></a></li>
