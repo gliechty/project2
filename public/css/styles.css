@@ -70,7 +70,7 @@ body{
 	color: rgb(217, 122, 26);
 }
 .white{
-	font-color: white;
+	color: white;
 }
 .navbar{
    background-color: transparent;
@@ -80,7 +80,11 @@ body{
 	background-color: rgb(217, 122, 26);
 	border-radius: 7px;
 }
-a{
+/*button:hover{
+	background-color: rgb(217, 122, 26);
+	border-radius: 7px;
+}*/
+.navbar-default .navbar-nav>li>a{
 	color: white;
 }
 .nomargin{

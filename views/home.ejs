@@ -41,7 +41,12 @@
 		var titleImage=document.getElementById('meme-title');
 		titleImage.innerHTML=title;
 		imageDiv.appendChild(newMeme);
+		document.getElementById('save-button').style.display = "block";
+		document.getElementById('refresh').style.display = "block";
 	};
+	function saveIt(){
+
+	}
 </script>
 </head>
 
@@ -103,7 +108,6 @@
 			      <option>Disaster Girl</option>
 			      <option>Do I Care Doe</option>
 			      <option>Eighties Teen</option>
-			      <option>Ermagerd Berks</option>
 			      <option>Fake Hurricane Guy</option>
 			      <option>First Day On The Internet Kid</option>
 			      <option>First World Stoner Problems</option>
@@ -120,14 +124,22 @@
 		</div>
 	</section>
 	<!-- contains appended image with title and text -->
-	<section class="meme-generator">
-		<div class="container indie orange big-bold" id="title-container">
-			<h1 id="meme-title"></h1>
-		</div>
-		<div class="meme-container container">
-			<div id="image-div"></div>
-		</div>
-	</section>
+	<form class="meme-generator" id="save-form">
+		<section class="meme-container">
+			<div class="container indie orange big-bold" id="title-container">
+				<h1 id="meme-title"></h1>
+			</div>
+			<div class="meme-container container">
+				<div id="image-div"></div>
+			</div>
+			</section>
+			<section class="save-button container">
+			<div class="container">
+				<button id="save-button" type="button" class="btn btn-default" style="display:none">Save This Meme!</button>
+				<button id="refresh" type="button" class="btn btn-default" style="display:none" onClick="window.location.reload()">New Meme Please</button>
+			</div>
+		</section>
+	</form>
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
