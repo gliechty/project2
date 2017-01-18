@@ -15,39 +15,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+ 
 <!-- app.js file -->
 
-<script src="app.js"></script>
+<script type="text/javascript" src="../js/app.js"></script>
 
 <!-- function to get image from mashape API -->
-<script>
-	function doIt() {
-		// get form field info
-		console.log("doIt works")
-		var title = document.getElementById('title').value;
-		var topText = document.getElementById('topText').value;
-		var bottomText = document.getElementById('bottomText').value;
-		var image = document.getElementById('img').value;
-		var encodedImg = encodeURI(image);
-		console.log(encodedImg);
-		// create an image element and set attributes
-		var newMeme = document.createElement('img');
-		// newMeme.setAttribute('src', "https://ronreiter-meme-generator.p.mashape.com/meme?bottom="+encodeURI(bottomText)+"&font=Impact&font_size=50&meme="+encodeURI(image)+"&top="+encodeURI(topText)+"&mashape-key=75YmJBAs6kmshPHOtokBTccTVQYYp1h379tjsnh2ftavbqSb5g")
 
-		// simpler, with no key
-		newMeme.setAttribute('src', "http://apimeme.com/meme?meme="+encodeURI(image)+"&top="+encodeURI(topText)+"&bottom="+encodeURI(bottomText))
-		var imageDiv=document.getElementById('image-div');
-		var titleImage=document.getElementById('meme-title');
-		titleImage.innerHTML=title;
-		imageDiv.appendChild(newMeme);
-		document.getElementById('save-button').style.display = "block";
-		document.getElementById('refresh').style.display = "block";
-	};
-	function saveIt(){
-
-	}
-</script>
 </head>
 
 <!-- include the header -->
@@ -135,7 +109,9 @@
 			</section>
 			<section class="save-button container">
 			<div class="container">
-				<button id="save-button" type="button" class="btn btn-default" style="display:none">Save This Meme!</button>
+			<!-- save this Meme!! -->
+				<button id="save-button" type="button" class="btn btn-default" style="display:none" onclick="saveIt()">Save This Meme!</button>
+				
 				<button id="refresh" type="button" class="btn btn-default" style="display:none" onClick="window.location.reload()">New Meme Please</button>
 			</div>
 		</section>

@@ -1,7 +1,5 @@
 var express = require('express');
-
-// requires unirest for mashape API routes
-var unirest = require('unirest');
+var app = express();
 
 var router = express.Router();
 // Parses information from POST
@@ -11,6 +9,7 @@ var methodOverride = require('method-override');
 var passport = require("passport");
 var usersController = require('../controllers/users');
 var staticsController = require('../controllers/statics');
+var memesController = require('../controllers/memes');
 
 function authenticatedUser(req, res, next){
 // if authenticated, continue
@@ -19,9 +18,10 @@ function authenticatedUser(req, res, next){
 	res.redirect('/');
 }
 
-////////////
-// routes //
-////////////
+//////////////
+// passport //
+// routes ////
+//////////////
 
 // gets home page 
 router.route('/')
@@ -45,11 +45,20 @@ router.route("/logout")
 router.route("/home")
   .get(authenticatedUser, usersController.home);
 
-// Testing this route to GET meme from meme generator API
+/////////////////
+// meme routes //
+/////////////////
 
-// UPDATE**now testing memegenerator as a DOM object. Can later save to this route as a .post method
+// gets/posts saved memes
+router.route("/home/meme")
+  .get(memesController.getMemes)
+  .post(memesController.postMemes);
 
-router.route("/home/memes")
-  .get(authenticatedUser, usersController.showMeme);
+router.route("/home/meme/:id")
+  .delete(memesController.deleteMeme);
+
 
 module.exports = router;
+
+
+// 

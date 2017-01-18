@@ -1,5 +1,5 @@
 var express      = require('express');
-var unirest 	 = require('unirest');
+
 var app          = express();
 var mongoose     = require('mongoose');
 var passport     = require('passport');
@@ -11,7 +11,7 @@ var session      = require('express-session');
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 
-mongoose.connect( process.env.MONGODB_URI || "mongodb://localhost/memes" );
+mongoose.createConnection( process.env.MONGODB_URI || "mongodb://localhost/memes" );
 
 app.use(morgan('dev')); 
 app.use(cookieParser());
@@ -39,3 +39,4 @@ var routes = require('./config/routes');
 app.use(routes);
 
 app.listen(process.env.PORT || 3000);
+console.log("server started");

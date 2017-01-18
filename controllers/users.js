@@ -1,4 +1,7 @@
 var passport = require("passport");
+var express = require('express');
+var app = express();
+var db = require('../models');
 
 // GET /signup
 function getSignup(request, response) {
@@ -41,13 +44,11 @@ function home(request, response){
 	response.render('home.ejs', {message: request.flash('You Got it')});
 }
 
-//******************************
-// Route to show the meme 
-//put header stuff - API key - here ? Look up set headers- 
 
-function showMeme(req, res){
-	response.render('meme.ejs', {message: request.flash('Your saved memes')});
-}
+// // Route to show saved memes
+// app.get('/home/meme', function showMeme(req, res){
+// 	res.render('meme.ejs');
+// });
 
 module.exports = {
   getLogin: getLogin,
@@ -56,5 +57,6 @@ module.exports = {
   postSignup: postSignup,
   getLogout: getLogout,
   home: home,
-  showMeme: showMeme
+  // postMeme : postMeme,
+  // showMeme: showMeme
 };

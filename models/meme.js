@@ -1,12 +1,12 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.schema;
 
-var Meme = mongoose.Schema({
-    title		   : String,
-    topText        : String,
-    bottomText     : String,
-    image		   : String,
-    url			   : String
+var MemeSchema = mongoose.Schema({
+    title: String,
+    url: String,
 });
 
-module.exports = mongoose.model('Meme', Meme);
+var Meme = mongoose.model('Meme', MemeSchema);
+
+module.exports = Meme;
 // mongoose.connect( process.env.MONGODB_URI || "YOUR CURRENT LOCALHOST DB CONNECTION STRING HERE" ); //for Heroku connections
